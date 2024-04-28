@@ -1,0 +1,140 @@
+from flask import Flask, render_template, request
+# from flask.ext.sqlalchemy import SQLAlchemy
+from flask_sqlalchemy import SQLAlchemy
+import json
+from flask_mail import Mail
+
+
+with open ('config.json','r') as c:
+    params=json.load(c)["params"]
+    
+local_server=True
+
+app = Flask(__name__)
+app.config.update(
+    MAIL_SERVER='smtp.gmail.com',
+    MAIL_PORT='465',
+    MAIL_USE_SSL=True,
+    MAIL_USERNAME=params['gmail_user'],
+    MAIL_PASSWORD=params['gmail_pass']
+)
+Mail=Mail(app)
+
+if (local_server):
+    app.config['SQLALCHEMY_DATABASE_URI'] = params['local_uri']
+else :
+    app.config['SQLALCHEMY_DATABASE_URI'] = params['pro_uri']
+    
+db = SQLAlchemy(app)
+
+class book_table_data(db.Model):
+    S_No = db.Column(db.Integer, primary_key=True, nullable=False)
+    Name = db.Column(db.String(50), nullable=False)
+    Date_Time = db.Column(db.String(50), nullable=False)
+    People = db.Column(db.Integer, nullable=False)
+    Request = db.Column(db.String(100), nullable=False)
+    E_Mail = db.Column(db.String(100), nullable=False)
+
+class login_user_data(db.Model):
+    L_S_No = db.Column(db.Integer, primary_key=True, nullable=False)
+    L_Name = db.Column(db.String(20), nullable=False)
+    L_Phone_Number = db.Column(db.String(20), nullable=False)
+    L_E_Mail = db.Column(db.String(20), nullable=False)
+    L_Pass = db.Column(db.String(20), nullable=False)
+    L_Con_Pass = db.Column(db.String(20), nullable=False)
+    
+    
+@app.route("/")
+def index():
+    return render_template('index.html', params=params)
+
+
+@app.route("/login",methods=['GET', 'POST'])
+def login():
+    if (request.method == 'POST'):
+        '''Add Entry To Database'''
+        user_name = request.form.get('user_name')
+        User_Email = request.form.get('User_Email')
+        User_Num = request.form.get('User_Num')
+        Create_Pass = request.form.get('Create_Pass')
+        Confirm_Pass = request.form.get('Confirm_Pass')
+        # S_No 	Name 	E_Mail 	Date_Time 	People 	Reques
+        entry = login_user_data(L_Name=user_name, L_E_Mail=User_Email, L_Phone_Number=User_Num, L_Pass=Create_Pass, L_Con_Pass=Confirm_Pass)
+        db.session.add(entry)
+        db.session.commit()
+    return render_template('login_Page_2.html', params=params)
+
+
+@app.route("/about")
+def about():
+    return render_template('about.html', params=params)
+
+
+@app.route("/booking", methods=['GET', 'POST'])
+def booking():
+    if (request.method == 'POST'):
+        '''Add Entry To Database'''
+        name = request.form.get('name')
+        Email = request.form.get('email')
+        date = request.form.get('date')
+        People = request.form.get('People')
+        Special = request.form.get('Special')
+        # S_No 	Name 	E_Mail 	Date_Time 	People 	Reques
+        entry = book_table_data(Name=name, E_Mail=Email, Date_Time=date, People=People, Request=Special)
+        db.session.add(entry)
+        db.session.commit()
+        Mail.send_message('New Message From : ' + name ,
+                          sender=Email, 
+                          recipients=[params['gmail_user']],
+                          body=Special + "\n" + name + "\n" + Email + "\n" + date + "\n" + People 
+                          )
+    return render_template('booking.html', params=params)
+
+
+@app.route("/contact")
+def contact():
+    return render_template('contact.html', params=params)
+
+
+@app.route("/menu")
+def menu():
+    return render_template('menu.html', params=params)
+
+
+@app.route("/service")
+def service():
+    return render_template('service.html', params=params)
+
+
+@app.route("/team")
+def team():
+    return render_template('team.html', params=params)
+
+
+@app.route("/testimonial")
+def testimonial():
+    return render_template('testimonial.html', params=params)
+
+
+@app.route("/guest")
+def guest():
+    return render_template('guest.html', params=params)
+
+
+@app.route("/home")
+def home():
+    return render_template('Home.html', params=params)
+
+
+@app.route("/veg")
+def veg():
+    return render_template('veg.html', params=params)
+
+
+@app.route("/member")
+def member():
+    return render_template('member.html', params=params)
+
+
+# it automatic Dedect The changement in File
+app.run(debug=True)

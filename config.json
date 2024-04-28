@@ -1,0 +1,11 @@
+{
+    "params":
+    {
+        "local_server" : "True",
+        "local_uri" : "mysql://root:@localhost/sep",
+        "pro_uri" : "mysql://root:@localhost/sep",
+        "fb_url":"https://facebook.com/seplunchboxservice",
+        "gmail_user" : "Sender_Email",
+        "gmail_pass" : "Sender_Password"
+    }
+}
