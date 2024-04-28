@@ -1,0 +1,113 @@
+{% extends "layout.html" %}
+
+{% block body %}
+
+            <div class="container-xxl py-5 bg-dark hero-header mb-5">
+                <div class="container text-center my-5 pt-5 pb-4">
+                    <h1 class="display-3 text-white mb-3 animated slideInDown">Profile</h1>
+                </div>
+            </div>
+
+        <!-- Contact Start -->
+
+        <div class="container-xxl py-5">
+            <div class="container">
+                <div class="main">
+                    <div class="card">
+                        {% for login in dta %}
+                        <div class="card-body">
+                            <table>
+                                <tbody>
+                                    <tr>
+                                        <td>Name</td>
+                                        <td>:</td>
+                                        <td>{{login.L_Name}}</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Email</td>
+                                        <td>:</td>
+                                        <td>imdezcode@gmail.com</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Address</td>
+                                        <td>:</td>
+                                        <td>Bali, Indonesia</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Hobbies</td>
+                                        <td>:</td>
+                                        <td>Diving, Reading Book</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Job</td>
+                                        <td>:</td>
+                                        <td>Web Developer</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Skill</td>
+                                        <td>:</td>
+                                        <td>PHP, HTML, CSS, Java</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        {% endfor %}
+                    </div>
+                </div>
+                    
+            </div>
+        </div>
+        <div class = "Bokking-data"> 
+            <table>
+                <table>
+                    <!--  <thead> ==> it mean Head of Table -->
+                    <thead> 
+                        <!-- <tr> ==> it Mean Table Move in Row Way TR=table Row  -->
+                        <tr>
+                            <!-- <th> ==> It Mean "Tablr Heading"  -->
+                            <th>Membership Start Date </th>
+                            <th>Month Of Membership</th>
+                            <th>Address</th>
+                        </tr>
+                    </thead>
+            
+                    <!-- <tbody>==>It Mean Fill Tha Table Body/Data After The Table Headig -->
+                    <tbody>
+                        <tr>
+                            <!-- <td> ==> it mean table Data -->
+                            <td>Prateek</td>
+                            <td>1001</td>
+                            <td>Kanpur</td>
+                        </tr>
+            
+                        <tr>
+                            <!-- <td> ==> it mean table Data -->
+                            <td>Vishal</td>
+                            <td>1002</td>
+                            <td>Kanpur</td>
+                        </tr>
+            
+                        <tr>
+                            <!-- <td> ==> it mean table Data -->
+                            <td>vaishal</td>
+                            <td>1003</td>
+                            <td>Kanpur</td>
+                        </tr>
+                    </tbody>
+            
+                    <tfoot>
+                        <tr>
+                            <!-- <td> ==> it mean table Data -->
+                            <td>End</td>
+                            <td>End</td>
+                            <td>End</td>
+                        </tr>
+                    </tfoot>
+                </table>
+        </div>
+        <!-- Contact End -->
+
+
+        <!-- Footer Start -->
+        {% endblock %}
