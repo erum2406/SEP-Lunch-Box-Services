@@ -1,0 +1,410 @@
+{% extends "layout.html" %}
+
+{% block body %}
+
+            <div class="container-xxl py-5 bg-dark hero-header mb-5">
+                <div class="container text-center my-5 pt-5 pb-4">
+                    <h1 class="display-3 text-white mb-3 animated slideInDown">Veg Food Menu</h1>
+                </div>
+            </div>
+        </div>
+        <!-- Navbar & Hero End -->
+
+
+        <!-- Menu Start -->
+        <div class="container-xxl py-5">
+            <div class="container">
+                <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+                    <h5 class="section-title ff-secondary text-center text-primary fw-normal">Food Menu</h5>
+                    <h1 class="mb-5">Most Popular Items</h1>
+                </div>
+                <div class="tab-class text-center wow fadeInUp" data-wow-delay="0.1s">
+                    <ul class="nav nav-pills d-inline-flex justify-content-center border-bottom mb-5">
+                        <li class="nav-item">
+                            <a class="d-flex align-items-center text-start mx-3 ms-0 pb-3 active" data-bs-toggle="pill"
+                                href="#tab-1">
+                                <i class="fa fa-coffee fa-2x text-primary"></i>
+                                <div class="ps-3">
+                                    <small class="text-body">Popular</small>
+                                    <h6 class="mt-n1 mb-0">Breakfast</h6>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="d-flex align-items-center text-start mx-3 pb-3" data-bs-toggle="pill"
+                                href="#tab-2">
+                                <i class="fa fa-hamburger fa-2x text-primary"></i>
+                                <div class="ps-3">
+                                   <small class="text-body">Special</small> 
+                                    <h6 class="mt-n1 mb-0">Lunch</h6>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="d-flex align-items-center text-start mx-3 me-0 pb-3" data-bs-toggle="pill"
+                                href="#tab-3">
+                                <i class="fa fa-utensils fa-2x text-primary"></i>
+                                <div class="ps-3">
+                                    <small class="text-body">Lovely</small> 
+                                    <h6 class="mt-n1 mb-0">Dinner</h6>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="tab-content">
+                        <div id="tab-1" class="tab-pane fade show p-0 active">
+                            <div class="row g-4">
+                                <div class="col-lg-6">
+                                    <div class="d-flex align-items-center">
+                                        <img class="flex-shrink-0 img-fluid rounded" src="{{url_for('static', filename='Img/fried_rice.jpg') }}" alt=""
+                                            style="width: 80px;">
+                                        <div class="w-100 d-flex flex-column text-start ps-4">
+                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                                <span class="fst-italic">Monday:</span>
+                                                <span>Fried Rice</span>
+                                                <span class="text-primary">₹50</span>
+                                            </h5>
+                                            <small class="fst-italic">Fried rice with red chilli sauce.</small>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="d-flex align-items-center">
+                                        <img class="flex-shrink-0 img-fluid rounded" src="{{url_for('static', filename='Img/Aloo_Paratha.jpeg') }}" alt=""
+                                            style="width: 80px;">
+                                        <div class="w-100 d-flex flex-column text-start ps-4">
+                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                                <span class="fst-italic">Tuesday:</span>
+                                                <span>Aalo Paratha</span>
+                                                <span class="text-primary">₹50</span>
+                                            </h5>
+                                            <small class="fst-italic">2 Aalo Paratha with curd, green chilli sauce, pickle and tomato sauce.</small>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="d-flex align-items-center">
+                                        <img class="flex-shrink-0 img-fluid rounded" src="{{url_for('static', filename='Img/Poori_Bhaji.jpeg') }}" alt=""
+                                            style="width: 80px;">
+                                        <div class="w-100 d-flex flex-column text-start ps-4">
+                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                                <span class="fst-italic">Wednesday:</span>
+                                                <span>Poori Bhaji</span>
+                                                <span class="text-primary">₹70</span>
+                                            </h5>
+                                            <small class="fst-italic">Bhaji and 4 Poori with pickle.</small>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="d-flex align-items-center">
+                                        <img class="flex-shrink-0 img-fluid rounded" src="{{url_for('static', filename='Img/Dhokla.jpeg') }}" alt=""
+                                            style="width: 80px;">
+                                        <div class="w-100 d-flex flex-column text-start ps-4">
+                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                                <span class="fst-italic">Thursday:</span>
+                                                <span>Dhokla</span>
+                                                <span class="text-primary">₹50</span>
+                                            </h5>
+                                            <small class="fst-italic">5 Dhokla with fried chillies.</small>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="d-flex align-items-center">
+                                        <img class="flex-shrink-0 img-fluid rounded" src="{{url_for('static', filename='Img/Pav_Bhaji.jpeg') }}" alt=""
+                                            style="width: 80px;">
+                                        <div class="w-100 d-flex flex-column text-start ps-4">
+                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                                <span class="fst-italic">Friday:</span>
+                                                <span>Pav Bhaji</span>
+                                                <span class="text-primary">₹80</span>
+                                            </h5>
+                                            <small class="fst-italic">Bhaji and 4 Pav with chillies, onion and lemon.</small>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="d-flex align-items-center">
+                                        <img class="flex-shrink-0 img-fluid rounded" src="{{url_for('static', filename='Img/Poha.jpeg') }}" alt=""
+                                            style="width: 80px;">
+                                        <div class="w-100 d-flex flex-column text-start ps-4">
+                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                                <span class="fst-italic">Saturday:</span>
+                                                <span>Poha</span>
+                                                <span class="text-primary">₹60</span>
+                                            </h5>
+                                            <small class="fst-italic">Poha with chillies.</small>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="d-flex align-items-center">
+                                        <img class="flex-shrink-0 img-fluid rounded" src="{{url_for('static', filename='Img/Bread_Tost.jpeg') }}" alt=""
+                                            style="width: 80px;">
+                                        <div class="w-100 d-flex flex-column text-start ps-4">
+                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                                <span class="fst-italic">Sunday:</span>
+                                                <span>Garlic Toast</span>
+                                                <span class="text-primary">₹60</span>
+                                            </h5>
+                                            <small class="fst-italic">4 Toast spread with special home-made garlic paste.</small>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="d-flex align-items-center">
+                                        <img class="flex-shrink-0 img-fluid rounded" src="{{url_for('static', filename='Img/Upmma.jpeg') }}" alt=""
+                                            style="width: 80px;">
+                                        <div class="w-100 d-flex flex-column text-start ps-4">
+                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                                <span class="fst-italic">Optional:</span>
+                                                <span>Upma</span>
+                                                <span class="text-primary">₹70</span>
+                                            </h5>
+                                            <small class="fst-italic">Upma with chillies and lemon.</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="tab-2" class="tab-pane fade show p-0">
+                            <div class="row g-4">
+                                <div class="col-lg-6">
+                                    <div class="d-flex align-items-center">
+                                        <img class="flex-shrink-0 img-fluid rounded" src="{{url_for('static', filename='Img/kadhi-chawal.jpg') }}" alt=""
+                                        style="width: 80px;">
+                                        <div class="w-100 d-flex flex-column text-start ps-4">
+                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                                <span class="fst-italic">Monday:</span>
+                                                <span>Kadhi-Chawal</span>
+                                                <span class="text-primary">₹100</span>
+                                            </h5>
+                                            <small class="fst-italic">Kadhi Rice and Salad</small> 
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="d-flex align-items-center">
+                                        <img class="flex-shrink-0 img-fluid rounded" src="{{url_for('static', filename='Img/kofta-lunch-.jpg') }}" alt=""
+                                            style="width: 80px;">
+                                        <div class="w-100 d-flex flex-column text-start ps-4">
+                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                                <span class="fst-italic">Tuesday:</span>
+                                                <span>Tuesday Platter</span>
+                                                <span class="text-primary">₹130</span>
+                                            </h5>
+                                            <small class="fst-italic">2 Parathas,Lauki Kofta Curry,Curd,Dal Fry,Rice,Karele, Salad and pickle.</small>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="d-flex align-items-center">
+                                        <img class="flex-shrink-0 img-fluid rounded" src="{{url_for('static', filename='Img/lunch-ideas.jpg') }}" alt=""
+                                            style="width: 80px;">
+                                        <div class="w-100 d-flex flex-column text-start ps-4">
+                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                                <span class="fst-italic">Wednesday:</span>
+                                                <span>Wednesday Platter</span>
+                                                <span class="text-primary">₹115</span>
+                                            </h5>
+                                            <small class="fst-italic">Dal,2 Parathas, Kaddu, Curd, Fruits and Bhindi .</small> 
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="d-flex align-items-center">
+                                        <img class="flex-shrink-0 img-fluid rounded" src="{{url_for('static', filename='Img/lunch-plate-1.jpg') }}" alt=""
+                                            style="width: 80px;">
+                                        <div class="w-100 d-flex flex-column text-start ps-4">
+                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                                <span class="fst-italic">Thursday:</span>
+                                                <span>Thursday Platter</span>
+                                                <span class="text-primary">₹115</span>
+                                            </h5>
+                                            <small class="fst-italic">Chole Masala, 2 Parathas, Curd, Aloo dry sabji, Sprouts salad, and lemon pickle.</small> 
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="d-flex align-items-center">
+                                        <img class="flex-shrink-0 img-fluid rounded" src="{{url_for('static', filename='Img/lunch-plate.jpg') }}" alt=""
+                                            style="width: 80px;">
+                                        <div class="w-100 d-flex flex-column text-start ps-4">
+                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                                <span class="fst-italic">Friday:</span>
+                                                <span>Friday Platter</span>
+                                                <span class="text-primary">₹115</span>
+                                            </h5>
+                                            <small class="fst-italic">2 Parathas, Chaach, Matar Paneer, Aloo french Beans, Green chutney, salad, and fruits.</small>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="d-flex align-items-center">
+                                        <img class="flex-shrink-0 img-fluid rounded" src="{{url_for('static', filename='Img/paneer-bhurji-parantha.jpg') }}" alt=""
+                                            style="width: 80px;">
+                                        <div class="w-100 d-flex flex-column text-start ps-4">
+                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                                <span class="fst-italic">Saturday:</span>
+                                                <span>Saturday Bhurji Paratha</span>
+                                                <span class="text-primary">₹100</span>
+                                            </h5>
+                                            <small class="fst-italic">Paneer Bhurji and 2 Parathas</small>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="d-flex align-items-center">
+                                        <img class="flex-shrink-0 img-fluid rounded" src="{{url_for('static', filename='Img/rajma-chawal.jpg') }}" alt=""
+                                            style="width: 80px;">
+                                        <div class="w-100 d-flex flex-column text-start ps-4">
+                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                                <span class="fst-italic">Sunday:</span>
+                                                <span>Sunday Special</span>
+                                                <span class="text-primary">₹130</span>
+                                            </h5>
+                                            <small class="fst-italic">Rajma Masala, Steamed Rice, Pickled Ginger, Salad and Mint Chutney.</small>
+                                        </div>
+                                    </div>
+                                </div> 
+                                <div class="col-lg-6">
+                                    <div class="d-flex align-items-center">
+                                        <img class="flex-shrink-0 img-fluid rounded" src="{{url_for('static', filename='Img/tikki-chole.jpg') }}" alt=""
+                                            style="width: 80px;">
+                                        <div class="w-100 d-flex flex-column text-start ps-4">
+                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                                <span class="fst-italic">Optional:</span>
+                                                <span>Tikki-Chole Platter </span>
+                                                <span class="text-primary">₹115</span>
+                                            </h5>
+                                            <small class="fst-italic">Aloo Tikki topped up with Chole, Green Chutney, Tamarind ChutneY and chopped Onions, Tomatoes, and Green Chilies.</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="tab-3" class="tab-pane fade show p-0">
+                            <div class="row g-4">
+                                <div class="col-lg-6">
+                                    <div class="d-flex align-items-center">
+                                        <img class="flex-shrink-0 img-fluid rounded" src="{{url_for('static', filename='Img/dal-chawal.jpg') }}" alt=""
+                                            style="width: 80px;">
+                                        <div class="w-100 d-flex flex-column text-start ps-4">
+                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                                <span class="fst-italic">Monday:</span>
+                                                <span>Monday Bhojan</span>
+                                                <span class="text-primary">₹115</span>
+                                            </h5>
+                                            <small class="fst-italic">Rice, Dal, Dry potato capsicum sabzi, Chaach, Pickel, Onions, and Mango.</small>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="d-flex align-items-center">
+                                        <img class="flex-shrink-0 img-fluid rounded" src="{{url_for('static', filename='Img/Paneer-Makhani.jpg') }}" alt=""
+                                            style="width: 80px;">
+                                        <div class="w-100 d-flex flex-column text-start ps-4">
+                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                                <span class="fst-italic">Tuesday:</span>
+                                                <span>Tuesday Makhani</span>
+                                                <span class="text-primary">₹130</span>
+                                            </h5>
+                                            <small class="fst-italic">Paneer Makhani,2 Roti, Curd, Masala Onion and Mix veg Pulav.</small>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="d-flex align-items-center">
+                                        <img class="flex-shrink-0 img-fluid rounded" src="{{url_for('static', filename='Img/Roti Chawal.jpg') }}" alt=""
+                                            style="width: 80px;">
+                                        <div class="w-100 d-flex flex-column text-start ps-4">
+                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                                <span class="fst-italic">Wednesday:</span>
+                                                <span>Simple Wednesday</span>
+                                                <span class="text-primary">₹130</span>
+                                            </h5>
+                                            <small class="fst-italic">2 Roti, Curd, Dal, Jeera Aloo, salad, Rice and Pickel.</small>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="d-flex align-items-center">
+                                        <img class="flex-shrink-0 img-fluid rounded" src="{{url_for('static', filename='Img/Ridge Gourd Sabji.jpg') }}" alt=""
+                                            style="width: 80px;">
+                                        <div class="w-100 d-flex flex-column text-start ps-4">
+                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                                <span class="fst-italic">Thursday:</span>
+                                                <span>Thursday Heavy</span>
+                                                <span class="text-primary">₹130</span>
+                                            </h5>
+                                            <small class="fst-italic">Taroi Sabji, Paneer Jalfrezi, 2 Roti, Karela Sabzi and Curd</small>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="d-flex align-items-center">
+                                        <img class="flex-shrink-0 img-fluid rounded" src="{{url_for('static', filename='Img/Khatta Meetha pumpkin.jpg') }}" alt=""
+                                            style="width: 80px;">
+                                        <div class="w-100 d-flex flex-column text-start ps-4">
+                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                                <span class="fst-italic">Friday:</span>
+                                                <span>Friday Special</span>
+                                                <span class="text-primary">₹150</span>
+                                            </h5>
+                                            <small class="fst-italic">4 Poori, Paneer Butter Masala, Boondi Raita, Kaddu Sabzi, Rasedar aloo sabzi, and fruits.</small>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="d-flex align-items-center">
+                                        <img class="flex-shrink-0 img-fluid rounded" src="{{url_for('static', filename='Img/Palak Paneer.jpg') }}" alt=""
+                                            style="width: 80px;">
+                                        <div class="w-100 d-flex flex-column text-start ps-4">
+                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                                <span class="fst-italic">Saturday:</span>
+                                                <span>Saturday Dinner</span>
+                                                <span class="text-primary">₹115</span>
+                                            </h5>
+                                            <small class="fst-italic">Bhindi Pyaz, Curd, Palak Paneer, Fruit, Salad, and 2 Roti.</small>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="d-flex align-items-center">
+                                        <img class="flex-shrink-0 img-fluid rounded" src="{{url_for('static', filename='Img/Masoor Dal.jpg') }}" alt=""
+                                            style="width: 80px;">
+                                        <div class="w-100 d-flex flex-column text-start ps-4">
+                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                                <span class="fst-italic">Sunday:</span>
+                                                <span>Sunday Hunger</span>
+                                                <span class="text-primary">₹130</span>
+                                            </h5>
+                                            <small class="fst-italic">2 Roti, Masoor Dal, Paneer Makhani, Potato Stir fry, Boondi Raita, and cucumber.</small>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="d-flex align-items-center">
+                                        <img class="flex-shrink-0 img-fluid rounded" src="{{url_for('static', filename='Img/Chla Bhatura.jpeg') }}" alt=""
+                                            style="width: 80px;">
+                                        <div class="w-100 d-flex flex-column text-start ps-4">
+                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                                <span class="fst-italic">Optional:</span>
+                                                <span>Chola Bhatura</span>
+                                                <span class="text-primary">₹100</span>
+                                            </h5>
+                                            <small class="fst-italic">3 Bhature, Chola, Onion, Lemon and Tomatoes</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Footer Start -->
+        {% endblock %}

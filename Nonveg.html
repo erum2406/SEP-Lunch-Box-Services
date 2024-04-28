@@ -1,0 +1,381 @@
+{% extends "layout.html" %}
+
+{% block body %}
+
+            <div class="container-xxl py-5 bg-dark hero-header mb-5">
+                <div class="container text-center my-5 pt-5 pb-4">
+                    <h1 class="display-3 text-white mb-3 animated slideInDown">Non-Veg Food Menu</h1>
+                </div>
+            </div>
+        </div>
+        <!-- Navbar & Hero End -->
+
+
+        <!-- Menu Start -->
+        <div class="container-xxl py-5">
+            <div class="container">
+                <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+                    <h5 class="section-title ff-secondary text-center text-primary fw-normal">Food Menu</h5>
+                    <h1 class="mb-5">Most Popular Items</h1>
+                </div>
+                <div class="tab-class text-center wow fadeInUp" data-wow-delay="0.1s">
+                    <ul class="nav nav-pills d-inline-flex justify-content-center border-bottom mb-5">
+                        <li class="nav-item">
+                            <a class="d-flex align-items-center text-start mx-3 ms-0 pb-3 active" data-bs-toggle="pill" href="#tab-1">
+                                <i class="fa fa-coffee fa-2x text-primary"></i>
+                                <div class="ps-3">
+                                    <small class="text-body">Popular</small>
+                                    <h6 class="mt-n1 mb-0">Breakfast</h6>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="d-flex align-items-center text-start mx-3 pb-3" data-bs-toggle="pill" href="#tab-2">
+                                <i class="fa fa-hamburger fa-2x text-primary"></i>
+                                <div class="ps-3">
+                                    <small class="text-body">Special</small>
+                                    <h6 class="mt-n1 mb-0">Lunch</h6>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="d-flex align-items-center text-start mx-3 me-0 pb-3" data-bs-toggle="pill" href="#tab-3">
+                                <i class="fa fa-utensils fa-2x text-primary"></i>
+                                <div class="ps-3">
+                                    <small class="text-body">Lovely</small>
+                                    <h6 class="mt-n1 mb-0">Dinner</h6>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="tab-content">
+                        <div id="tab-1" class="tab-pane fade show p-0 active">
+                            <div class="row g-4">
+                                <div class="col-lg-6">
+                                    <div class="d-flex align-items-center">
+                                        <img class="flex-shrink-0 img-fluid rounded" src="{{url_for('static', filename='Img/chicken-burger.jpg') }}" alt="" style="width: 80px;">
+                                        <div class="w-100 d-flex flex-column text-start ps-4">
+                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                                <span class="fst-italic">Monday:</span>
+                                                <span>Chicken Burger</span>
+                                                <span class="text-primary">₹70</span>
+                                            </h5>
+                                            <small class="fst-italic">A burger stuffed with Cabbage, Chicken, Tomato and sauces.</small>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="d-flex align-items-center">
+                                        <img class="flex-shrink-0 img-fluid rounded" src="{{url_for('static', filename='Img/Best-Omelette.jpg') }}" alt="" style="width: 80px;">
+                                        <div class="w-100 d-flex flex-column text-start ps-4">
+                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                                <span class="fst-italic">Tuesday:</span>
+                                                <span>Omelette</span>
+                                                <span class="text-primary">₹40</span>
+                                            </h5>
+                                            <small class="fst-italic">A Omelette of 2 eggs with great flavors.</small>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="d-flex align-items-center">
+                                        <img class="flex-shrink-0 img-fluid rounded" src="{{url_for('static', filename='Img/Egg-Masala-Fry.jpg') }}" alt="" style="width: 80px;">
+                                        <div class="w-100 d-flex flex-column text-start ps-4">
+                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                                <span class="fst-italic">Wednesday</span>
+                                                <span>Egg-Masala-Fry</span>
+                                                <span class="text-primary">₹50</span>
+                                            </h5>
+                                            <small class="fst-italic">2 boiled eggs fried in our special masalas.</small>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="d-flex align-items-center">
+                                        <img class="flex-shrink-0 img-fluid rounded" src="{{url_for('static', filename='Img/Egg-Bhurgi.jpg') }}" alt="" style="width: 80px;">
+                                        <div class="w-100 d-flex flex-column text-start ps-4">
+                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                                <span class="fst-italic">Thursday</span>
+                                                <span>Egg-Bhurji</span>
+                                                <span class="text-primary">₹40</span>
+                                            </h5>
+                                            <small class="fst-italic">Burji of 2 eggs with delicious flavours.</small>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="d-flex align-items-center">
+                                        <img class="flex-shrink-0 img-fluid rounded" src="{{url_for('static', filename='Img/Chilli-Fish.jpg') }}" alt="" style="width: 80px;">
+                                        <div class="w-100 d-flex flex-column text-start ps-4">
+                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                                <span class="fst-italic">Friday</span>
+                                                <span>Chilli-Fish</span>
+                                                <span class="text-primary">₹80</span>
+                                            </h5>
+                                            <small class="fst-italic">Chilli Fish with veggies included.</small>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="d-flex align-items-center">
+                                        <img class="flex-shrink-0 img-fluid rounded" src="{{url_for('static', filename='Img/hot-and-sour-chicken-soup.jpg') }}" alt="" style="width: 80px;">
+                                        <div class="w-100 d-flex flex-column text-start ps-4">
+                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                                <span class="fst-italic">Saturday</span>
+                                                <span>Chicken-Soup</span>
+                                                <span class="text-primary">₹90</span>
+                                            </h5>
+                                            <small class="fst-italic">Hot and Sour Chicken Soup</small>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="d-flex align-items-center">
+                                        <img class="flex-shrink-0 img-fluid rounded" src="{{url_for('static', filename='Img/egg-sandwich.jpg') }}" alt="" style="width: 80px;">
+                                        <div class="w-100 d-flex flex-column text-start ps-4">
+                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                                <span class="fst-italic">Sunday</span>
+                                                <span>Egg-sandwich.jpg</span>
+                                                <span class="text-primary">₹70</span>
+                                            </h5>
+                                            <small class="fst-italic">2 Sandwich stuffed with 2 eggs, Veggies and Sauces.</small>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="d-flex align-items-center">
+                                        <img class="flex-shrink-0 img-fluid rounded" src="{{url_for('static', filename='Img/paratha.jpg') }}" alt="" style="width: 80px;">
+                                        <div class="w-100 d-flex flex-column text-start ps-4">
+                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                                <span>Paratha/Roti</span>
+                                                <span class="text-primary">₹10</span>
+                                            </h5>
+                                            <small class="fst-italic">1 Paratha or 2 Roti</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="tab-2" class="tab-pane fade show p-0">
+                            <div class="row g-4">
+                                <div class="col-lg-6">
+                                    <div class="d-flex align-items-center">
+                                        <img class="flex-shrink-0 img-fluid rounded" src="{{url_for('static', filename='Img/Butter Chicken.jpg') }}" alt="" style="width: 80px;">
+                                        <div class="w-100 d-flex flex-column text-start ps-4">
+                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                                <span class="fst-italic">Monday</span>
+                                                <span>Butter-Chicken Platter</span>
+                                                <span class="text-primary">₹190</span>
+                                            </h5>
+                                            <small class="fst-italic">Butter Chicken Gravy, Rice and 2 Roti with onion.</small>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="d-flex align-items-center">
+                                        <img class="flex-shrink-0 img-fluid rounded" src="{{url_for('static', filename='Img/Mutton-Curry.jpg') }}" alt="" style="width: 80px;">
+                                        <div class="w-100 d-flex flex-column text-start ps-4">
+                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                                <span class="fst-italic">Tuesday</span>
+                                                <span>Mutton-Curry Platter</span>
+                                                <span class="text-primary">₹200</span>
+                                            </h5>
+                                            <small class="fst-italic">Mutton Curry, Rice and 2 Roti with Onion.</small>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="d-flex align-items-center">
+                                        <img class="flex-shrink-0 img-fluid rounded" src="{{url_for('static', filename='Img/Tandoori Chicken.jpg') }}" alt="" style="width: 80px;">
+                                        <div class="w-100 d-flex flex-column text-start ps-4">
+                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                                <span class="fst-italic">Wednesday</span>
+                                                <span>Tandoori Chicken</span>
+                                                <span class="text-primary">₹180</span>
+                                            </h5>
+                                            <small class="fst-italic">Chicken cooked in Tandoor with smoky flavour with Onion and Rayta.</small>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="d-flex align-items-center">
+                                        <img class="flex-shrink-0 img-fluid rounded" src="{{url_for('static', filename='Img/Rara-Murgh.jpg') }}" alt="" style="width: 80px;">
+                                        <div class="w-100 d-flex flex-column text-start ps-4">
+                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                                <span class="fst-italic">Thursday</span>
+                                                <span>Rara-Murgh</span>
+                                                <span class="text-primary">₹170</span>
+                                            </h5>
+                                            <small class="fst-italic">Rara Murgh Gravy, Rice and 2 Roti with Onion.</small>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="d-flex align-items-center">
+                                        <img class="flex-shrink-0 img-fluid rounded" src="{{url_for('static', filename='Img/Punjabhi Chicken.jpg') }}" alt="" style="width: 80px;">
+                                        <div class="w-100 d-flex flex-column text-start ps-4">
+                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                                <span class="fst-italic">Friday</span>
+                                                <span>Punjabhi Chicken</span>
+                                                <span class="text-primary">₹220</span>
+                                            </h5>
+                                            <small class="fst-italic">Punjabi Chicken Gravy, Rice and 2 Roti with Onion.</small>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="d-flex align-items-center">
+                                        <img class="flex-shrink-0 img-fluid rounded" src="{{url_for('static', filename='Img/Hyderabadi-chicken.jpg') }}" alt="" style="width: 80px;">
+                                        <div class="w-100 d-flex flex-column text-start ps-4">
+                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                                <span class="fst-italic">Saturday</span>
+                                                <span>Hyderabadi-chicken</span>
+                                                <span class="text-primary">₹210</span>
+                                            </h5>
+                                            <small class="fst-italic">Hyderabadi Chiken Gravy, Rice and 2 Roti with Onion.</small>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="d-flex align-items-center">
+                                        <img class="flex-shrink-0 img-fluid rounded" src="{{url_for('static', filename='Img/Tantoori Fish.jpeg') }}" alt="" style="width: 80px;">
+                                        <div class="w-100 d-flex flex-column text-start ps-4">
+                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                                <span class="fst-italic">Sunday</span>
+                                                <span>Tantoori Fish</span>
+                                                <span class="text-primary">₹150</span>
+                                            </h5>
+                                            <small class="fst-italic">Tandoori Fish with Onion and Rayta.</small>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="d-flex align-items-center">
+                                        <img class="flex-shrink-0 img-fluid rounded" src="{{url_for('static', filename='Img/Chiken-Tikka.jpeg') }}" alt="" style="width: 80px;">
+                                        <div class="w-100 d-flex flex-column text-start ps-4">
+                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                                <span class="fst-italic">Optional</span>
+                                                <span>Chiken-Tikka</span>
+                                                <span class="text-primary">₹160</span>
+                                            </h5>
+                                            <small class="fst-italic">Chicken Tikka with Onion and Rayta.</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="tab-3" class="tab-pane fade show p-0">
+                            <div class="row g-4">
+                                <div class="col-lg-6">
+                                    <div class="d-flex align-items-center">
+                                        <img class="flex-shrink-0 img-fluid rounded" src="{{url_for('static', filename='Img/Chilli Chicken.jpeg') }}" alt="" style="width: 80px;">
+                                        <div class="w-100 d-flex flex-column text-start ps-4">
+                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                                <span class="fst-italic">Monday</span>
+                                                <span>Chilli Chicken</span>
+                                                <span class="text-primary">₹150</span>
+                                            </h5>
+                                            <small class="fst-italic">Chilli Chicken with Onion and Rayta.</small>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="d-flex align-items-center">
+                                        <img class="flex-shrink-0 img-fluid rounded" src="{{url_for('static', filename='Img/Boneless Fish Fry.jpg') }}" alt="" style="width: 80px;">
+                                        <div class="w-100 d-flex flex-column text-start ps-4">
+                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                                <span class="fst-italic">Tuesday</span>
+                                                <span>Boneless Fish Fry</span>
+                                                <span class="text-primary">₹250</span>
+                                            </h5>
+                                            <small class="fst-italic">Boneless Fish Fry with Onion and Rayta.</small>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="d-flex align-items-center">
+                                        <img class="flex-shrink-0 img-fluid rounded" src="{{url_for('static', filename='Img/Tawa Chicken.jpg') }}" alt="" style="width: 80px;">
+                                        <div class="w-100 d-flex flex-column text-start ps-4">
+                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                                <span class="fst-italic">Wednesday</span>
+                                                <span>Tawa Chicken</span>
+                                                <span class="text-primary">₹110</span>
+                                            </h5>
+                                            <small class="fst-italic">Tawa Chicken, Rice and 2 Roti with Onion.</small>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="d-flex align-items-center">
+                                        <img class="flex-shrink-0 img-fluid rounded" src="{{url_for('static', filename='Img/Fish Kali Mirch Tikka.jpeg') }}" alt="" style="width: 80px;">
+                                        <div class="w-100 d-flex flex-column text-start ps-4">
+                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                                <span class="fst-italic">Thursday</span>
+                                                <span>Fish Kali Mirch Tikka</span>
+                                                <span class="text-primary">₹230</span>
+                                            </h5>
+                                            <small class="fst-italic">Fish Kali Mirch Tikka with Onion and Rayta.</small>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="d-flex align-items-center">
+                                        <img class="flex-shrink-0 img-fluid rounded" src="{{url_for('static', filename='Img/Chicken Kolhapuri.jpg') }}" alt="" style="width: 80px;">
+                                        <div class="w-100 d-flex flex-column text-start ps-4">
+                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                                <span class="fst-italic">Friday</span>
+                                                <span>Chicken Kolhapuri</span>
+                                                <span class="text-primary">₹240</span>
+                                            </h5>
+                                            <small class="fst-italic">Chicken Kolhapuri, Rice and 2 Roti with Onion.</small>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="d-flex align-items-center">
+                                        <img class="flex-shrink-0 img-fluid rounded" src="{{url_for('static', filename='Img/Chicken-Kali-Mirch.jpg') }}" alt="" style="width: 80px;">
+                                        <div class="w-100 d-flex flex-column text-start ps-4">
+                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                                <span class="fst-italic">Saturday</span>
+                                                <span>Chicken-Kali-Mirch</span>
+                                                <span class="text-primary">₹190</span>
+                                            </h5>
+                                            <small class="fst-italic">Chicken Kali Mirch Gravy, Rice and 2 Roti with Onion.</small>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="d-flex align-items-center">
+                                        <img class="flex-shrink-0 img-fluid rounded" src="{{url_for('static', filename='Img/chicken biryani.jpg') }}" alt="" style="width: 80px;">
+                                        <div class="w-100 d-flex flex-column text-start ps-4">
+                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                                <span class="fst-italic">Sunday</span>
+                                                <span>Chicken Biryani</span>
+                                                <span class="text-primary">₹100</span>
+                                            </h5>
+                                            <small class="fst-italic">Chicken Biryani with Onion and Rayta.</small>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="d-flex align-items-center">
+                                        <img class="flex-shrink-0 img-fluid rounded" src="{{url_for('static', filename='Img/Mutton-Roganjosh-scaled.jpg') }}" alt="" style="width: 80px;">
+                                        <div class="w-100 d-flex flex-column text-start ps-4">
+                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                                <span class="fst-italic">Optional</span>
+                                                <span>Mutton-Roganjosh</span>
+                                                <span class="text-primary">₹270</span>
+                                            </h5>
+                                            <small class="fst-italic">Mutton Roganjosh, Rice and 2 Roti with Onion.</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer Start -->
+        {% endblock %}
